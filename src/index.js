@@ -4,6 +4,8 @@ const cors = require('cors');
 
 require('dotenv').config();
 
+require('./middlewares/verify-token');
+
 const app = express();
 
 app.use(passport.initialize());
