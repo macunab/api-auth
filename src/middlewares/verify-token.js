@@ -3,7 +3,7 @@ const passport = require('passport');
 const extractJWT = require('passport-jwt').ExtractJwt;
 
 passport.use(new JWTstrategy({
-    secretOrKey: 'secret pass para firmar nuestro JWT',
+    secretOrKey: process.env.SECRET_KEY,
     jwtFromRequest: extractJWT.fromHeader('x-token')
 }, (token, done) => {
     try {
