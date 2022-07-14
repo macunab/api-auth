@@ -9,5 +9,4 @@ const dbConnection = async () => {
         throw new Error('An error ocurred while db connection');
     }
 }
-
 module.exports = dbConnection;

@@ -1,12 +1,15 @@
 const express = require('express');
 const passport = require('passport');
 const cors = require('cors');
+const dbConnection = require('./db/config');
 
 require('dotenv').config();
 
 // auth middlewares
 require('./middlewares/google-auth');
 require('./middlewares/verify-token');
+
+dbConnection();
 
 // init conf express
 const app = express();

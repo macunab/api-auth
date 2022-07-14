@@ -9,7 +9,7 @@ router.get('/auth/google',
     passport.authenticate('sign-in-google', {scope: ['profile', 'email']}));
 
 // Login successfull
-router.get('/aut/google/callback',
+router.get('/auth/google/callback',
     passport.authenticate('sign-in-google', { session: false }),
     authGoogle);    
 
