@@ -15,3 +15,5 @@ router.get('/users', (req, res) => {
         user: null
     })
 });
+
+module.exports = router;

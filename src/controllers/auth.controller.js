@@ -1,4 +1,5 @@
 const { response } = require('express');
+const jwt = require('jsonwebtoken');
 
 const authGoogle = (req, res = response) => {
     if(req.user) {

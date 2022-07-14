@@ -1,5 +1,4 @@
 const { Router } = require('express');
-const jwt = require('jsonwebtoken');
 const passport = require('passport');
 const { authGoogle } = require('../controllers/auth.controller');
 
@@ -13,3 +12,5 @@ router.get('/auth/google',
 router.get('/aut/google/callback',
     passport.authenticate('sign-in-google', { session: false }),
     authGoogle);    
+
+module.exports = router;
